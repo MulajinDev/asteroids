@@ -1,6 +1,7 @@
 import pygame
 
 from constants import *
+from player import Player
 
 def main():
     print("Starting Asteroids!")
@@ -18,7 +19,7 @@ def main():
     dt = 0
 
     #create player
-    player = player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+    player1 = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
 
     #main game loop
     while True:
@@ -31,7 +32,7 @@ def main():
         screen.fill(000000)
 
         #draw player
-        player.draw(screen)
+        player1.draw(screen)
 
         #refresh display
         pygame.display.flip()
