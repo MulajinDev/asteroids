@@ -4,14 +4,17 @@ import pygame
 class CircleShape(pygame.sprite.Sprite):
     def __init__(self, x, y, radius):
 
-        # we will be using this later
+        #if we're in a container, pass 'em up
         if hasattr(self, "containers"):
             super().__init__(self.containers)
         else:
             super().__init__()
 
+        #set position and velo
         self.position = pygame.Vector2(x, y)
         self.velocity = pygame.Vector2(0, 0)
+
+        #set radius
         self.radius = radius
 
     def draw(self, screen):

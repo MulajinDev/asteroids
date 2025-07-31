@@ -5,8 +5,6 @@ from player import Player
 
 def main():
     print("Starting Asteroids!")
-    print(f"Screen width: {SCREEN_WIDTH}")
-    print(f"Screen height: {SCREEN_HEIGHT}")
 
     #initialize pygame
     pygame.init()
@@ -24,7 +22,7 @@ def main():
 
     #add to groups
     Player.containers = (updatables, drawables)
-    
+
     #create player
     player1 = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
 
